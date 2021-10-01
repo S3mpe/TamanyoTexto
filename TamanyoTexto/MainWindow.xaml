@@ -1,0 +1,56 @@
+﻿<Window x:Class="TamanyoTexto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TamanyoTexto"
+        mc:Ignorable="d"
+        Title="TamanyoTexto" Height="450" Width="800" Icon="starwars.ico">
+    <Grid DataContext="Desarrollo de Interfaces">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="354*"/>
+            <RowDefinition Height="65*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="TextoTextBlock" Text="{Binding}" FontFamily="{Binding}"
+ToolTip="{Binding}"
+ FontSize="50" Margin="10,108,30,185.537" Foreground="#FF273AF7" FontWeight="Bold" Width="752" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock.BitmapEffect>
+                <DropShadowBitmapEffect Softness="0.2" Opacity="0.7"
+ShadowDepth="6"/>
+            </TextBlock.BitmapEffect>
+        </TextBlock>
+        <RadioButton x:Name="PequeñoRadioButton" Tag="40" Content="Pequeño" HorizontalAlignment="Left" Margin="239,333,0,0" VerticalAlignment="Top" Height="40" Width="158" FontSize="12
+                     " GroupName="Tamaño" RenderTransformOrigin="0.5,0.5" Checked="Button_Checked"  Grid.RowSpan="2" >
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="4" ScaleY="4"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <RadioButton x:Name="MedianoRadioButton"  Content="Mediano" HorizontalAlignment="Left" Margin="-180,192.463,0,-167" VerticalAlignment="Top" Height="40" Width="162" FontSize="12" 
+                      RenderTransformOrigin="-0.936,2.224" GroupName="Tamaño" Tag="50" IsChecked="True"  Checked="Button_Checked"  Grid.Row="1">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="4" ScaleY="4"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <RadioButton x:Name="GrandeRadioButton" Content="Grande"       HorizontalAlignment="Left" Margin="751,338,-94,0" VerticalAlignment="Top" Height="40" Width="135" FontSize="12" 
+                     GroupName="Tamaño" RenderTransformOrigin="0.5,0.5" Checked="Button_Checked"  Grid.RowSpan="2" Tag="60">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="4" ScaleY="4"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+    </Grid>
+</Window>
